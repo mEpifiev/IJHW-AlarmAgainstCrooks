@@ -77,7 +77,9 @@ public class Alarm : MonoBehaviour
             yield return null;
         }
 
-        _audioSource.Stop();
+        if (Mathf.Approximately(targetVolume, MinVolume))
+            _audioSource.Stop();
+
         _fadeVolumeRoutine = null;
     }
 }
