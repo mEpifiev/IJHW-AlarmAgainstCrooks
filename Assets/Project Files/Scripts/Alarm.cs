@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -78,9 +77,7 @@ public class Alarm : MonoBehaviour
             yield return null;
         }
 
-        if (Mathf.Approximately(targetVolume, MinVolume))
-            _audioSource.Stop();
-
+        _audioSource.Stop();
         _fadeVolumeRoutine = null;
     }
 }
